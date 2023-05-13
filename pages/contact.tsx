@@ -12,6 +12,6 @@ export default function contact() {
         <title>Valverde | Contact</title>
       </Head>
 
-    <Wrapper pageIndex={4}> Home</Wrapper></>
+    <Wrapper pageIndex={5}> Home</Wrapper></>
   )
 }

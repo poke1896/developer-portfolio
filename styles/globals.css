@@ -9,13 +9,13 @@
 
 ::-webkit-scrollbar {
   width: 0.75rem;
-  background-color: #b3b2b1;
+  background-color: #ffff;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 0.5rem;
-  background-color: #eeb844;
+  background-color: #5f9ea0;
   border-radius: 10px;
 }
 
@@ -23,4 +23,12 @@
   section {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-screen
   }
+}
+.projectCard {
+  width: 200px; /* Ajusta el ancho del cuadro según tus necesidades */
+  height: 200px; /* Ajusta la altura del cuadro según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

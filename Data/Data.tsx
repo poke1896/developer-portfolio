@@ -42,6 +42,7 @@ import {
   const navLinks: NavLink[] = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
+    { path: "/skill", label: "skill" },
     { path: "/portfolio", label: "Portfolio" },
     { path: "/contact", label: "Contact" },
   ];
@@ -77,13 +78,16 @@ import {
   ];
   
   const skills = [
+    { name: "Python", level: 85 },
+    { name: "Java", level: 70 },
+    { name: "C++", level: 80 },
     { name: "HTML", level: 80 },
-    { name: "paython", level: 65 },
-    { name: "CSS", level: 70 },
+    { name: "CSS", level: 73 },
     { name: "JavaScript", level: 75 },
-    { name: "TypeScript", level: 60 },
-    { name: "ReactJS", level: 75 },
-    { name: "NextJS", level: 65 },
+    { name: "TypeScript", level: 63 },
+    { name: "ReactJS", level: 72 },
+    { name: "NextJS", level: 68 },
+    { name: "SQL", level: 75 },
   ];
   
   const contacts: ContactsProps[] = [
