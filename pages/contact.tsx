@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Wrapper from '@/components/Wrapper';
 import { contacts } from '@/Data/Data';
 import { FormEvent } from 'react';
+import { HiPhone, HiOutlineMail, HiLocationMarker } from "react-icons/hi"
 
 export default function Contact() {
   const [animatedTitle, setAnimatedTitle] = useState('');
@@ -81,7 +82,15 @@ export default function Contact() {
                 <div className="text-xl font-medium mb-2">{contact.title}</div>
                 <div className="text-sm text-WhiteGray">{contact.text}</div>
               </div>
+
             ))}
+            <div className="grid justify-center items-center text-white p-4 md:p-10">
+              <div className="flex flex-row">
+                <HiPhone className="text-white text-2xl mr-4" />
+                <HiOutlineMail className="text-white text-2xl mr-4" />
+                <HiLocationMarker className="text-white text-2xl" />
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div

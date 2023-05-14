@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Wrapper from "@/components/Wrapper";
+import {AiFillGithub} from "react-icons/ai"
 
 type Project = {
   id: number;
@@ -59,8 +60,8 @@ export default function Portfolio(): JSX.Element {
       <Head>
         <title>Valverde | Portfolio</title>
       </Head>
-      <Wrapper pageIndex={4} className="bg-black flex justify-center items-center">
-        <div className="text-center">
+      <Wrapper pageIndex={4} >
+        <div className="flex flex-col text-center pt-40 items-center text-center">
           <h1
             className="text-white"
             style={{
@@ -72,21 +73,23 @@ export default function Portfolio(): JSX.Element {
           >
             Portfolio
           </h1>
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 md:px-8">
             {projects.map((project) => (
               <motion.div
                 key={project.id}
-                className="projectCard shadow-ShadowBlur bg-gray-800 p-4 rounded-lg m-2"
+                className="projectCard shadow-ShadowBlur bg-Blur p-4  rounded-lg"
                 initial="initial"
                 whileHover="hover"
                 transition={projectTransition}
                 variants={projectVariants}
               >
+                
                 <Link className="text-white" target="_blank" rel="noopener noreferrer" href={project.html_url} passHref>
-                  
+                <AiFillGithub className="text-3xl hover:scale-110 transition-all duration-300  " />
                     {project.name}
-                  
+                              
                 </Link>
+                
               </motion.div>
             ))}
           </div>

@@ -1,5 +1,18 @@
 import { SkillBarProps } from "@/Types";
 import { useEffect, useRef, useState } from "react";
+import {
+  SiPython,
+  SiCplusplus,
+  SiJavascript,
+  SiCss3,
+  SiTypescript,
+  SiNextdotjs,
+  SiMysql,
+  SiHtml5
+} from "react-icons/si";
+import { DiJava, DiReact } from "react-icons/Di";
+
+const iconMap: { [key: string]: JSX.Element } = {};
 
 export default function Skills({ skills }: SkillBarProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -8,6 +21,7 @@ export default function Skills({ skills }: SkillBarProps) {
   const [animatedProgress, setAnimatedProgress] = useState<number[]>(
     skills.map(() => 0)
   );
+
   useEffect(() => {
     function onScroll() {
       if (ref.current) {
@@ -23,6 +37,7 @@ export default function Skills({ skills }: SkillBarProps) {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, [skills, visible]);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setAnimatedProgress((prevProgress) =>
@@ -34,15 +49,16 @@ export default function Skills({ skills }: SkillBarProps) {
       );
     }, 100);
     return () => {
-        clearInterval(intervalId)
-    }
+      clearInterval(intervalId);
+    };
   }, [progress]);
+
   return (
-    <div>
-      <div className="text-WhiteGray font-semibold uppercase text-sm text-center">
+    <div className="bg-red text-white">
+      <div className="text-WhiteGray font-semibold uppercase text-sm text-center py-4">
         Technologies
       </div>
-      <div className="font-semibold text-3xl mt-4 text-center text-White">
+      <div className="font-semibold text-3xl mt-4 text-center">
         MY SKILLS
       </div>
       <div ref={ref} className="grid md:grid-cols-2 gap-4 p-10">
@@ -50,14 +66,38 @@ export default function Skills({ skills }: SkillBarProps) {
           <div key={skill.name} className="mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-White">{skill.name}</span>
-              <span className="font-bold text-WhiteGray text-sm">{animatedProgress[index]}%</span>
+              <span className="font-bold text-WhiteGray text-sm">
+                {animatedProgress[index]}%
+              </span>
             </div>
             <div className="relative w-full h-2 bg-WhiteGray rounded-full overflow-hidden">
-                <div className="absolute top-0 left-0 h-full bg-Turquoise rounded-full" style={{width: `${visible ? animatedProgress[index] : 0}%`, transition: "width 1s"}}></div>
+              <div
+                className="absolute top-0 left-0 h-full bg-Turquoise rounded-full"
+                style={{
+                  width: `${visible ? animatedProgress[index] : 0}%`,
+                  transition: "width 1s",
+                }}
+              ></div>
             </div>
           </div>
         ))}
       </div>
+      <div className="grid grid-cols-5 gap-4 justify-center items-center text-White p-4 md:p-10">
+
+        <SiPython className="text-White text-6xl" />
+        <SiCplusplus className="text-White text-6xl" />
+        <DiJava className="text-White text-6xl" />
+        <SiJavascript className="text-White text-6xl" />
+        <SiCss3 className="text-White text-6xl" />
+        <SiTypescript className="text-White text-6xl" />
+        <DiReact className="text-White text-6xl" />
+        <SiNextdotjs className="text-White text-6xl" />
+        <SiMysql className="text-White text-6xl" />
+        <SiHtml5 className="text-White text-6xl" />
+
+      </div>
+
     </div>
+
   );
 }
