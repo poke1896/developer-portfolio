@@ -71,9 +71,9 @@ export default function Contact() {
             {showFullTitle ? 'Contact' : animatedTitle}
           </div>
           <p className="leading-8 mb-8 text-sm max-w-xl mt-10 text-WhiteGray">
-            If you're seeking a talented backend developer to transform your web application concepts into reality, don't hesitate to reach out.
-            I'm available to explore how I can make valuable contributions to your team and ensure exceptional outcomes. Feel free to initiate a conversation,
-            and let's uncover the possibilities together.
+            If you&apos;re seeking a talented backend developer to transform your web application concepts into reality, don&apos;t hesitate to reach out.
+            I&apos;m available to explore how I can make valuable contributions to your team and ensure exceptional outcomes. Feel free to initiate a conversation,
+            and let&apos;s uncover the possibilities together.
           </p>
           <div>
             {contacts.map((contact) => (

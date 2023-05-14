@@ -9,7 +9,7 @@ export default function About() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    const fullText = "Designer & BackEnd Developer, based on Costa Rica";
+    const fullText = "Designer and BackEnd Developer, based on Costa Rica";
     let currentIndex = 0;
 
     const intervalId = setInterval(() => {
