@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Wrapper from "@/components/Wrapper";
 
 type Project = {
@@ -15,7 +16,7 @@ export default function Portfolio(): JSX.Element {
   useEffect(() => {
     fetchProjects(); // Fetch inicial de proyectos
 
-    const intervalId = setInterval(fetchProjects, 3000); // Ejecutar fetch cada 5 segundos
+    const intervalId = setInterval(fetchProjects, 9000); // Ejecutar fetch cada 3 segundos
 
     return () => {
       clearInterval(intervalId); // Limpiar el intervalo al desmontar el componente
@@ -38,6 +39,21 @@ export default function Portfolio(): JSX.Element {
       });
   };
 
+  const projectVariants = {
+    initial: {
+      scale: 1
+    },
+    hover: {
+      scale: 1.1
+    }
+  };
+
+  const projectTransition = {
+    type: "spring",
+    stiffness: 500,
+    damping: 25
+  };
+
   return (
     <>
       <Head>
@@ -45,14 +61,33 @@ export default function Portfolio(): JSX.Element {
       </Head>
       <Wrapper pageIndex={4} className="bg-black flex justify-center items-center">
         <div className="text-center">
-          <h1 className="text-white" style={{ fontSize: "3rem", margin: "2rem 0", fontWeight: "bold", borderBottom: "2px solid turquoise" }}>Portfolio</h1>
+          <h1
+            className="text-white"
+            style={{
+              fontSize: "3rem",
+              margin: "2rem 0",
+              fontWeight: "bold",
+              borderBottom: "2px solid turquoise"
+            }}
+          >
+            Portfolio
+          </h1>
           <div className="flex flex-wrap justify-center">
             {projects.map((project) => (
-              <div key={project.id} className="projectCard bg-gray-800 p-4 rounded-lg m-2">
-                <Link className="text-white" href={project.html_url}>
-                  {project.name}
+              <motion.div
+                key={project.id}
+                className="projectCard shadow-ShadowBlur bg-gray-800 p-4 rounded-lg m-2"
+                initial="initial"
+                whileHover="hover"
+                transition={projectTransition}
+                variants={projectVariants}
+              >
+                <Link className="text-white" target="_blank" rel="noopener noreferrer" href={project.html_url} passHref>
+                  
+                    {project.name}
+                  
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

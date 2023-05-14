@@ -40,10 +40,10 @@ export default function Skills({ skills }: SkillBarProps) {
   return (
     <div>
       <div className="text-WhiteGray font-semibold uppercase text-sm text-center">
-        - Skills
+        Technologies
       </div>
       <div className="font-semibold text-3xl mt-4 text-center text-White">
-        What I Expert
+        MY SKILLS
       </div>
       <div ref={ref} className="grid md:grid-cols-2 gap-4 p-10">
         {skills.map((skill, index) => (

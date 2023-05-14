@@ -6,7 +6,6 @@
   text-shadow: 0 0 20px #00ffff, 0 0 20px #00ffff, 0 0 20px #00ffff;
 }
 
-
 ::-webkit-scrollbar {
   width: 0.75rem;
   background-color: #ffff;
@@ -21,14 +20,19 @@
 
 @layer components {
   section {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-screen
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-screen;
   }
 }
+
 .projectCard {
-  width: 200px; /* Ajusta el ancho del cuadro según tus necesidades */
-  height: 200px; /* Ajusta la altura del cuadro según tus necesidades */
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.languages {
+  margin-top: 0.5rem;
 }

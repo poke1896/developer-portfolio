@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const Valverde = () => {
-  const text = "Valverde"; // Texto a animar
+  const text = "<Valverde>"; // Texto a animar
   const textVariants = {
     hidden: { opacity: 1 },
     visible: {
