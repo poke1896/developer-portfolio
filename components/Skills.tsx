@@ -10,7 +10,7 @@ import {
   SiMysql,
   SiHtml5
 } from "react-icons/si";
-import { DiJava, DiReact } from "react-icons/Di";
+import { DiJava, DiReact } from "react-icons/di";
 
 
 export default function Skills({ skills }: SkillBarProps) {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { WrapperProps } from "@/Types";
-import { DiJava,DiReact } from "react-icons/Di";
+import { DiReact } from "react-icons/di";
 import {  SiTypescript, SiNextdotjs } from 'react-icons/si';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
