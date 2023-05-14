@@ -12,7 +12,6 @@ import {
 } from "react-icons/si";
 import { DiJava, DiReact } from "react-icons/Di";
 
-const iconMap: { [key: string]: JSX.Element } = {};
 
 export default function Skills({ skills }: SkillBarProps) {
   const ref = useRef<HTMLDivElement>(null);
