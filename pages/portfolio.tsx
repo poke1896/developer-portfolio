@@ -10,6 +10,7 @@ type Project = {
   name: string;
   html_url: string;
 };
+const proyect_github ='https://api.github.com/users/poke1896/repos'
 
 export default function Portfolio(): JSX.Element {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -25,7 +26,7 @@ export default function Portfolio(): JSX.Element {
   }, []);
 
   const fetchProjects = (): void => {
-    fetch("https://api.github.com/users/poke1896/repos")
+    fetch(proyect_github)
       .then((response) => response.json())
       .then((data) => {
         const formattedProjects = data.map((project: any) => ({

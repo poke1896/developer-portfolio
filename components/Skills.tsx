@@ -81,7 +81,7 @@ export default function Skills({ skills }: SkillBarProps) {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-5 gap-4 justify-center items-center text-White p-4 md:p-10">
+      <div className="flex flex-col grid grid-cols-5 gap-4 justify-center items-center text-White p-4 md:p-10">
 
         <SiPython className="text-White text-6xl" />
         <SiCplusplus className="text-White text-6xl" />

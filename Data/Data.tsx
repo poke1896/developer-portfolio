@@ -1,9 +1,7 @@
 import {
     ContactsProps,
     countUpItemsProps,
-    NavLink,
-    ProjectProps,
-    ServiceProps,
+    NavLink
   } from "@/Types";
  
   
