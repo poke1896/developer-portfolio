@@ -54,7 +54,7 @@ export default function About() {
             <p className="text-WhiteGray text-sm mt-8 leading-7">
               Hi! I&apos;m Adrian, a passionate back-end programmer and a student of Systems Engineering at the University of Hispanoamerica. Currently,
                I am studying at the University of Costa Rica to expand my knowledge in the field of computer science. I love designing and building
-               robust and efficient systems that power web applications and services. I have experience with languages such as Java, C++, and Python, 
+               robust and efficient systems that power web applications and services. I have experience with languages such as Java Script, Dart, and Python, 
                and I have worked with popular frameworks like Reactjs, Next.js, and SQL. I am an organized individual with great attention to detail, 
                and I value teamwork and collaboration. I am excited to contribute to innovative and challenging projects as part of your team!
             </p>
