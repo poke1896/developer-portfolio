@@ -38,8 +38,8 @@ import {
   
   
   const skills = [
-    { name: "Python", level: 85 },
-    { name: "Java", level: 70 },
+    { name: "Python", level: 75 },
+    { name: "Dart", level: 80 },
     { name: "C++", level: 80 },
     { name: "HTML", level: 80 },
     { name: "CSS", level: 73 },
